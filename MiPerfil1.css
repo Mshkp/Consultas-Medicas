@@ -2,80 +2,100 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
+    background-color: #f2f2f2;
 }
 
 header {
-    background: linear-gradient(to bottom, #7be733, #258312);
+    background: linear-gradient(to right, #26f70a, #76c287);
     color: #fff;
+    padding: 20px;
     text-align: center;
-    padding: 40px 0;
+}
+
+nav {
+    background-color: #727272;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
 }
 
 nav ul {
     list-style-type: none;
+    margin: 0;
     padding: 0;
-    text-align: center;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
 }
 
 nav ul li a {
-    color: #333;
+    color: #fff;
     text-decoration: none;
-    padding: 8px 20px;
-    border-radius: 20px;
-    transition: background-color 0.3s;
+    padding: 10px 20px;
 }
 
 nav ul li a:hover {
-    background-color: #ddd;
+    background-color: #555;
 }
 
 main {
-    padding: 40px;
+    padding: 20px;
 }
 
 section {
-    margin-bottom: 60px;
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h1, h2, p {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 footer {
-    background-color: #eee;
+    background-color: #727272;
+    color: #fff;
     text-align: center;
-    padding: 20px 0;
-    border-top: 1px solid #ddd;
+    padding: 10px 0;
 }
 
-/* Estilos para los botones */
 button {
-    background-color: #256ec2;
+    background-color: #256600;
     color: #fff;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
-    font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s;
     margin-right: 10px;
 }
 
 button:hover {
-    background-color: #18f035;
+    background-color: #0056b3;
 }
 
-.doctor-info img {
-    margin-right: 20px; /* Espacio entre la imagen y el texto */
-    width: 100px; /* Ancho de la imagen */
-    height: auto; /* Altura ajustada automáticamente */
-    border-radius: 50%; /* Hacer la imagen redonda */
+/* Estilos específicos para los botones dentro del encabezado */
+header button {
+    margin: 0 10px;
+}
+
+
+/* Estilos para el contenedor del encabezado */
+.header-content {
+    display: flex; /* Usa flexbox */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+/* Estilos para la imagen de perfil */
+header img {
+    width: 100px; /* Ajusta el ancho de la imagen según sea necesario */
+    border: 7px solid #a2b39f;
+    border-radius: 50%; /* Para hacer un círculo con la imagen */
+}
+
+/* Estilos para el contenido de texto */
+.text-content {
+    margin-left: 20px; /* Añade un margen a la izquierda para separar la imagen del texto */
+}
+
+/* Estilos específicos para los botones dentro del encabezado */
+.actions {
+    margin-left: auto; /* Mueve los botones hacia la derecha tanto como sea posible */
 }

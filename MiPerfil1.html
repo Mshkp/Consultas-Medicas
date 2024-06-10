@@ -8,13 +8,18 @@
 </head>
 <body>
     <header>
-        <img src="Fotos\doctores\descarga (1).jpg" alt="Foto del Dr. Juan Pérez">
-        <div>
-            <h1>Bienvenido Sr. Juan Pérez</h1>
-            <h3>Perfil de paciente</h3>
-            <button onclick="editarPerfil()">Editar Perfil</button>
-            <button onclick="redirigirConsultas()">Administrar consultas</button>
+        <div class="header-content">
+            <img src="Fotos\doctores\descarga (1).jpg" alt="Foto de perfil">
+            <div class="text-content">
+                <h1>Bienvenido Sr. Juan Pérez</h1>
+                <h3>Perfil de paciente</h3>
+            </div>
+            <div class="actions">
+                <button onclick="editarPerfil()">Editar Perfil</button>
+                <button onclick="redirigirConsultas()">Administrar consultas</button>
+            </div>
         </div>
+        
     </header>
     
     <nav>
@@ -22,13 +27,16 @@
             <li><a href="#perfil">Perfil</a></li>
             <li><a href="#MiHistorial">Mi historial</a></li>
             <li><a href="#contacto">Contacto</a></li>
+            
         </ul>
+        
     </nav>
+    
     <main>
         <section id="perfil">
             <h2>Perfil</h2>
-            <p>62 años</p>
-            <p>El Sr. Juan Perez tiene cáncer</p>
+            <p>Edad: 62 años</p>
+            <p>Diagnostico: El Sr. Juan Perez tiene cáncer</p>
         </section>
         <section id="MiHistorial">
             <h2>Mi historial</h2>
@@ -40,12 +48,13 @@
         <section id="contacto">
             <h2>Contacto</h2>
             <p>Email: juanperez@example.com</p>
+            <p>Celular: 22-1400-12-90</p>
             <p>Teléfono: 555-123-4567</p>
             
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Dr. Juan Pérez</p>
+        <p>&copy; 2024 Clinica virtual</p>
     </footer>
     <script>
         function editarPerfil() {

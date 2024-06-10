@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Médico</title>
+    <link rel="stylesheet" href="MiPerfil1.css">
+</head>
+<body>
+    <header>
+        <div class="doctor-info">
+            <img src="Fotos\descarga.jpg" alt="Foto del Dr. Juan Pérez">
+            <div>
+                <h1>Bienvenido Dr. Juan Pérez</h1>
+                <h2>Médico Especialista en Cardiología</h2>
+                <h3>Perfil profesional</h3>
+                <button onclick="editarPerfil()">Editar Perfil</button>
+                <button onclick="redirigirConsultas()">Administrar consultas</button>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#perfil">Perfil</a></li>
+            <li><a href="#educacion">Educación</a></li>
+            <li><a href="#experiencia">Experiencia</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            
+        </ul>
+    </nav>
+    <main>
+        <section id="perfil">
+            <h2>Perfil</h2>
+            <p>El Dr. Juan Pérez es un médico especialista en cardiología con más de 10 años de experiencia en el diagnóstico y tratamiento de enfermedades cardíacas.</p>
+        </section>
+        <section id="educacion">
+            <h2>Educación</h2>
+            <ul>
+                <li>MD, Universidad Nacional Autónoma de México</li>
+                <li>Residencia en Cardiología, Hospital General de México</li>
+            </ul>
+        </section>
+        <section id="experiencia">
+            <h2>Experiencia</h2>
+            <ul>
+                <li>Cardiólogo en Hospital ABC, Ciudad de México (2010 - Presente)</li>
+                <li>Cardiólogo Consultor en Hospital Juárez, Ciudad de México (2008 - 2010)</li>
+            </ul>
+        </section>
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Email: juanperez@example.com</p>
+            <p>Teléfono: 555-123-4567</p>
+            
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Dr. Juan Pérez</p>
+    </footer>
+    <script>
+        function editarPerfil() {
+            // Aquí puedes agregar el código JavaScript para la función de editar perfil
+            alert("Función de editar perfil");
+        }
+
+        function redirigirConsultas() {
+            // Aquí puedes agregar el código JavaScript para redirigir a la página de administrar consultas
+            window.location.href = "pagina_consultas.html"; // Cambia "pagina_consultas.html" por la URL de tu página de administrar consultas
+        }
+    </script>
+</body>
+</html>
+

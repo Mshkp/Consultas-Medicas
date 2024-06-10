@@ -22,6 +22,10 @@
                 <input type="text" id="name" placeholder="Nombre">
                 <input type="email" id="email" placeholder="Correo Electrónico">
                 <input type="password" id="password" placeholder="Contraseña">
+                <select id="userType" class="select-wrapper">
+                    <option value="doctor">Médico</option>
+                    <option value="patient">Paciente</option>
+                </select>
                 <button id="registerButton">Registrar Cuenta Nueva</button>
                 <p id="successMessage" class="hidden">¡Cuenta registrada exitosamente!</p>
                 <p id="errorMessage" class="hidden"> *Todos los campos son obligatorios* </p>
@@ -36,7 +40,7 @@
                 </div>
                 <input type="email" id="loginEmail" placeholder="Correo">
                 <input type="password" id="loginPassword" placeholder="Contraseña">
-                <a href="#">¿Olvidaste tu Contraseña?</a>
+                <a href="OlvidasteContrasena.html">¿Olvidaste tu Contraseña?</a>
                 <a href="Lobby-Paciente.html">
                     <button type="button" id="loginButton">Iniciar</button>
                 </a>

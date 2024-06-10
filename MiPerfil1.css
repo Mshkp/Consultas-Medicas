@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+header {
+    background: linear-gradient(to bottom, #7be733, #258312);
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #ddd;
+}
+
+main {
+    padding: 40px;
+}
+
+section {
+    margin-bottom: 60px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+footer {
+    background-color: #eee;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+}
+
+/* Estilos para los botones */
+button {
+    background-color: #256ec2;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #18f035;
+}
+
+.doctor-info {
+    display: flex;
+    align-items: center;
+}
+
+.doctor-info img {
+    margin-right: 40px; /* Espacio entre la imagen y el texto */
+    padding: 20px 30px;
+    border-radius: 36px;
+    background-color: #f8f9fa;
+    border: 15px;
+    margin-left: 40px;
+}

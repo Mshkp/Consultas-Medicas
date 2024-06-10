@@ -16,8 +16,6 @@ nav ul {
     list-style-type: none;
     padding: 0;
     text-align: center;
-    font-family: Arial, sans-serif;
-
 }
 
 nav ul li {
@@ -75,16 +73,9 @@ button:hover {
     background-color: #18f035;
 }
 
-.doctor-info {
-    display: flex;
-    align-items: center;
-}
-
 .doctor-info img {
-    margin-right: 40px; /* Espacio entre la imagen y el texto */
-    padding: 20px 30px;
-    border-radius: 36px;
-    background-color: #f8f9fa;
-    border: 15px;
-    margin-left: 40px;
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+    width: 100px; /* Ancho de la imagen */
+    height: auto; /* Altura ajustada automáticamente */
+    border-radius: 50%; /* Hacer la imagen redonda */
 }

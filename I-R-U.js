@@ -1,13 +1,13 @@
 // Mantener la funcionalidad original de cambio entre formularios
 const container = document.getElementById('container');
-const registerBtn = document.getElementById('register');
-const loginBtn = document.getElementById('login');
+const goToRegister = document.getElementById('goToRegister');
+const goToLogin = document.getElementById('goToLogin');
 
-registerBtn.addEventListener('click', () => {
+goToRegister.addEventListener('click', () => {
     container.classList.add("active");
 });
 
-loginBtn.addEventListener('click', () => {
+goToLogin.addEventListener('click', () => {
     container.classList.remove("active");
 });
 
@@ -57,10 +57,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 // Funcionalidad de inicio de sesión
 document.getElementById('loginForm').addEventListener('submit', async (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Asegúrate de que el formulario no se envíe por defecto
 
     const loginEmail = document.getElementById('loginEmail').value.trim();
     const loginPassword = document.getElementById('loginPassword').value.trim();
+
+    console.log('Email:', loginEmail); // Verifica el valor del email
+    console.log('Password:', loginPassword); // Verifica el valor de la contraseña
+
+    // Validación de campos vacíos
+    if (!loginEmail || !loginPassword) {
+        alert('Por favor, complete ambos campos.');
+        console.log('Campos vacíos, no se envía la solicitud.');
+        return; // No enviar la solicitud si los campos están vacíos
+    }
 
     const formData = new FormData();
     formData.append('email', loginEmail);

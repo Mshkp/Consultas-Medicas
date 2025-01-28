@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de paciente</title>
+    <link rel="stylesheet" href="4-PerfilPaciente.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="1-FOTOS\images (5).jpg" alt="Foto de perfil">
+            <div class="text-content">
+                <h1>Bienvenido Sr. Juan Pérez</h1>
+                <h3>Perfil de paciente</h3>
+            </div>
+            <div class="actions">
+                <button onclick="editarPerfil()">Editar Perfil</button>
+                <button onclick="redirigirConsultas()">Administrar consultas</button>
+            </div>
+        </div>
+        
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#Perfil">Perfil</a></li>
+            <li><a href="#MiHistorial">Mi historial</a></li>
+            <li><a href="#Contacto">Contacto</a></li>
+            <li><a href="#MasInformacion">Mas Informacion</a></li>
+        </ul>
+        
+    </nav>
+    
+    <main>
+        <section id="Perfil">
+            <h2>Perfil</h2>
+            <P>Nombre: Juan Manuel Perez Rendon</P>
+            <p>Fecha de nacimiento: 04-06-86</p>
+            <P>Edad: 62 años</P>
+            <p>Genero: Masculino</p>
+            <P>Estatura: 173cm (22-05-24)</P>
+            <p>Peso: 82kg (22-05-24)</p>
+            <p>Diagnostico: El Sr. Juan Perez tiene cáncer</p>
+            <p>Tipo de sangre: O+</p>
+        </section>
+        <section id="MiHistorial">
+            <h2>Mi historial</h2>
+            <ul>
+                <li>3 consultas de especialidad</li>
+                <li>1 tratamiento en curso</li>
+            </ul>
+        </section>
+        <section id="Contacto">
+            <h2>Contacto</h2>
+            <p>- Email: juanperez@example.com</p>
+            <p>- Celular: 22-1400-12-90</p>
+            <p>- Teléfono: 555-123-4567</p>
+            <p>- Direccion: Calle Ferrocarril #5405 San Anotnio Abad. Puebla Pue.</p>
+            <p>- Contacto de emergencia: 22-1400-14-21 (Hijo: Raul Prez)</p>
+        </section>
+        <section id="MasInformacion">
+            <h2>Mas informacion</h2>
+            <p>(Aqui aparecera infromacion adicional que tu medico crea relevante)</p>
+            <p>- Tipo de seguro: IMSS</p>
+            <p>- Se unio en: 03-04-24</p>
+            <p>- El señor Juan Perez ya ha recibido 2 tratamiento previamente</p>
+            <p>- Alergias: Penicilina / nestesia local / Paracetamol</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Clinica virtual</p>
+    </footer>
+    <script>
+        function editarPerfil() {
+            // Aquí puedes agregar el código JavaScript para la función de editar perfil
+            alert("Agrega la fokin funcion para editar");
+        }
+
+        function redirigirConsultas() {
+            // Aquí puedes agregar el código JavaScript para redirigir a la página de administrar consultas
+            window.location.href = "1-Calendario.html"; // Cambia "pagina_consultas.html" por la URL de tu página de administrar consultas
+        }
+    </script>
+</body>
+</html>
+
+

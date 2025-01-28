@@ -1,0 +1,61 @@
+/* Estilos para el formulario */
+form {
+    max-width: 400px;
+    margin: -30px auto; /* Modificado para separar el formulario del borde superior */
+    padding: 50px;
+    border: 5px solid #98d38d;
+    border-radius: 36px;
+    background-color: #f8f9fa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Estilos para los elementos del formulario */
+form label {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 94%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+form button[type="submit"],
+form button[type="button"],
+.nuevo-boton {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 30px;
+    background-color: #01d401;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilo adicional para los botones en hover */
+form button[type="submit"]:hover,
+form button[type="button"]:hover,
+.nuevo-boton:hover {
+    background-color: #d6d6d6;
+}
+
+body {
+    background-color: #d6d6d6; /* Color de fondo inicial */
+    background-image: linear-gradient(to right, #f5f5f5, #93a9c2); /* Degradado vertical */
+}
+
+.nuevo-boton {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+}

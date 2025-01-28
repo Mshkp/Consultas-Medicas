@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+header {
+    background: linear-gradient(to right, #aeccc1, #1dd329);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #727272;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #727272;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+button {
+    background-color: #256600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos específicos para los botones dentro del encabezado */
+header button {
+    margin: 0 10px;
+}
+
+
+/* Estilos para el contenedor del encabezado */
+.header-content {
+    display: flex; /* Usa flexbox */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+/* Estilos para la imagen de perfil */
+header img {
+    width: 100px; /* Ajusta el ancho de la imagen según sea necesario */
+    border: 5px solid #00ca3d;
+    border-radius: 5%; /* Para hacer un círculo con la imagen */
+}
+
+/* Estilos para el contenido de texto */
+.text-content {
+    margin-left: 20px; /* Añade un margen a la izquierda para separar la imagen del texto */
+}
+
+/* Estilos específicos para los botones dentro del encabezado */
+.actions {
+    margin-left: auto; /* Mueve los botones hacia la derecha tanto como sea posible */
+}

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +22,7 @@
                 <input type="text" id="name" placeholder="Nombre">
                 <input type="email" id="email" placeholder="Correo Electrónico">
                 <input type="password" id="password" placeholder="Contraseña">
-                <button id="registerButton">Registrar Cuenta Nueva</button>
+                <button type="submit" id="registerButton">Registrar Cuenta Nueva</button>
                 <p id="successMessage" class="hidden">¡Cuenta registrada exitosamente!</p>
                 <p id="errorMessage" class="hidden"> *Todos los campos son obligatorios* </p>
             </form>
@@ -35,14 +34,13 @@
                 <h1>Iniciar Sesión</h1>
                 <div class="social-icons">
                     <a href="https://www.instagram.com/_mshkp_/" class="icon" target="_blank">
-                        <i class="fa-brands fa-instagram"></i></a>
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
                 </div>
                 <input type="email" id="loginEmail" placeholder="Correo">
                 <input type="password" id="loginPassword" placeholder="Contraseña">
-                <a href="3-OlvidasteContrasena.html">¿Olvidaste tu Contraseña?</a>
-                <a href="2-LobbyPaciente.html">
-                    <button type="button" id="loginButton">Iniciar</button>
-                </a>
+                
+                <button type="submit" id="loginButton">Iniciar</button>
             </form>
         </div>
 
@@ -52,13 +50,13 @@
                 <div class="toggle-panel toggle-left">
                     <h1>¡Bienvenido!</h1>
                     <p>Registre sus datos.</p>
-                    <button id="login">Iniciar Sesión</button>
+                    <button id="goToLogin">Iniciar Sesión</button>
                 </div>
 
                 <div class="toggle-panel toggle-right">
                     <h1>¿Nuevo Usuario?</h1>
                     <br>
-                    <button id="register">Crear Cuenta</button>
+                    <button id="goToRegister">Crear Cuenta</button>
                 </div>
             </div>
         </div>

@@ -1,0 +1,153 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:300);
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: #910f0f;
+    overflow-y: hidden!important;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #910f0f;
+    transition: 0.5s ease;
+}
+
+a:hover {
+    color: #000000;
+}
+
+.form {
+    background: #ececec;
+    padding: 40px;
+    max-width: 600px;
+    margin: 40px auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px 4px #910f0f;
+}
+
+.tab-group {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+}
+
+.tab-group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.tab-group li a {
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+    background: rgba(160, 179, 176, .25);
+    color: #000000;
+    font-size: 20px;
+    float: left;
+    width: 48%;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.tab-group li a:hover {
+    background: #910f0f;
+    color: #ffffff;
+}
+
+.tab-group .active a {
+    background: #910f0f;
+    color: #ffffff;
+}
+
+.tab-content > div:last-child {
+    display: none;
+}
+
+.tab-group {
+    border-radius: 15px!important;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #000000;
+    font-weight: 300;
+    margin: 0 0 40px;
+}
+
+input, textarea {
+    font-size: 17px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 5px 10px;
+    background: none;
+    background-image: none;
+    border: 1px solid #000000;
+    color: #000000;
+    border-radius: 6px;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+textarea {
+    border: 2px solid #910f0f;
+    resize: vertical;
+}
+
+.field-wrap {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.top-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.top-row > div {
+    float: left;
+    width: 48%;
+    margin-right: 4%;
+}
+
+.top-row > div:last-child {
+    margin: 0;
+}
+
+.button {
+    border: 0;
+    outline: none;
+    border-radius: 15px;
+    padding: 15px 0;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    background: #910f0f;
+    cursor: pointer;
+    color: #fff;
+    transition: all 0.5s ease;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.button:hover, .button:focus {
+    background: #910f0f;
+}
+
+.button-block {
+    display: block;
+    width: 100%;
+}
+
+.forgot {
+    margin-top: -20px;
+    text-align: right;
+}

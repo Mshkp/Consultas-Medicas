@@ -1,0 +1,124 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Contenedor principal */
+  .config-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Títulos */
+  h2 {
+    text-align: center;
+    color: #4CAF50; /* Verde */
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  /* Estilos para los grupos de formulario */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  /* Estilos para los inputs */
+  input[type="text"], select, input[type="checkbox"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+  }
+  
+  input[type="text"]:focus, select:focus, input[type="checkbox"]:focus {
+    border-color: #4CAF50; /* Verde al enfocarse */
+    outline: none;
+  }
+  
+  /* Botones */
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #45a049; /* Verde más oscuro */
+  }
+  
+  /* Estilo específico para el botón "Regresar al Lobby" */
+  #backToLobby {
+    background-color: #2196F3; /* Azul */
+    margin-top: 20px;
+  }
+  
+  #backToLobby:hover {
+    background-color: #1976D2; /* Azul más oscuro */
+  }
+  
+  /* Animación de desvanecimiento */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Estilo para el mensaje de estado */
+  .status-message {
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #e1f7e1;
+    color: #4CAF50;
+    font-size: 14px;
+    display: none;
+  }
+  
+  /* Agregar una animación para mostrar el mensaje de estado */
+  @keyframes showMessage {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .status-message.show {
+    display: block;
+    animation: showMessage 0.5s ease-out;
+  }
+  

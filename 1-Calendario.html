@@ -1,58 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calendario</title>
   <link rel="stylesheet" href="1-Calendario.css">
-
-  <!-- Enlace a Bootstrap CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  <div class="calendar">
-    <div class="header">
-      <button id="prevBtn">&lt;</button>
-      <h2 id="monthYear"></h2>
-      <button id="nextBtn">&gt;</button>
-    </div>
-    <div class="weekdays">
-      <div>Lunes</div>
-      <div>Martes</div>
-      <div>Miercoles</div>
-      <div>Jueves</div>
-      <div>Viernes</div>
-      <div>Sabado</div>
-      <div>Domingo</div>
-    </div>
-    <div class="days"></div>
-
-    <div class="modal" id="eventPopup" tabindex="-1">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="eventPopupTitle"></h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" id="eventPopupBody">
-              <!-- Botones nuevos -->
-              <button id="eventPopupButton" class="btn btn-primary">Mi Botón</button>
-              <button class="new-button">Nuevo Botón 2</button>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
+  <div class="calendar-container">
+    <!-- Calendario -->
+    <div class="calendar">
+      <div class="header">
+        <button id="prevBtn">&lt;</button>
+        <h2 id="monthYear"></h2>
+        <button id="nextBtn">&gt;</button>
       </div>
+      <div class="weekdays">
+        <div>Lun</div>
+        <div>Mar</div>
+        <div>Mie</div>
+        <div>Jue</div>
+        <div>Vie</div>
+        <div>Sab</div>
+        <div>Dom</div>
+      </div>
+      <div class="days"></div>
+    </div>
+
+    <!-- Botón para regresar al Lobby -->
+    <button id="backToLobby" class="btn btn-secondary mt-4" onclick="goBackToLobby()">Regresar al Lobby</button>
   </div>
 
-  <!-- Enlace a Bootstrap JavaScript y Popper.js -->
+<!-- Modal para agendar evento -->
+<div class="modal" id="addEventModal" tabindex="-1" aria-labelledby="addEventModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="addEventModalLabel">Agendar Cita</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <form id="eventForm">
+                  <div class="mb-3">
+                      <label for="eventTime" class="form-label">Hora</label>
+                      <input type="time" class="form-control" id="eventTime" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="eventMotivo" class="form-label">Motivo</label>
+                      <input type="text" class="form-control" id="eventMotivo" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="eventDescripcion" class="form-label">Descripción</label>
+                      <textarea class="form-control" id="eventDescripcion" rows="3" required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Guardar Cita</button>
+              </form>
+              <!-- Botón para borrar la cita -->
+              <button type="button" id="deleteEventBtn" class="btn btn-danger mt-3" style="display:none;">Borrar Cita</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+  <!-- Bootstrap y Script del Calendario -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="1-Calendario.JS"></script>
+  <script src="1-Calendario.js"></script>
 </body>
 </html>

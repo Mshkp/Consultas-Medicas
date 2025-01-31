@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pantalla de Configuración</title>
+  <link rel="stylesheet" href="configuracion.css">
+</head>
+<body>
+  <div class="config-container">
+    <h2>Configuración de Usuario</h2>
+    <form id="configForm">
+      <div class="form-group">
+        <label for="username">Nombre de usuario:</label>
+        <input type="text" id="username" name="username" placeholder="Ingrese su nombre">
+      </div>
+      
+      <div class="form-group">
+        <label for="theme">Tema:</label>
+        <select id="theme" name="theme">
+          <option value="light">Claro</option>
+          <option value="dark">Oscuro</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="notifications">Notificaciones:</label>
+        <input type="checkbox" id="notifications" name="notifications">
+      </div>
+
+      <div class="form-group">
+        <label for="language">Idioma:</label>
+        <select id="language" name="language">
+          <option value="es">Español</option>
+          <option value="en">Inglés</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="fontSize">Tamaño de fuente:</label>
+        <select id="fontSize" name="fontSize">
+          <option value="small">Pequeño</option>
+          <option value="medium">Mediano</option>
+          <option value="large">Grande</option>
+        </select>
+      </div>
+
+      <button type="button" onclick="saveSettings()">Guardar configuración</button>
+      <button type="button" onclick="resetSettings()">Restaurar predeterminados</button>
+    </form>
+
+    <button id="backToLobby" onclick="goBackToLobby()">Regresar al Lobby</button>
+
+    <div id="statusMessage" class="status-message"></div>
+  </div>
+
+  <script src="configuracion.js"></script>
+</body>
+</html>

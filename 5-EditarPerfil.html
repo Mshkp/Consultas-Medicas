@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil</title>
+    <link rel="stylesheet" href="5-EditarPerfil.css">
+</head>
+<body>
+    <div class="edit-container">
+        <h2>Editar Perfil</h2>
+        <form id="editProfileForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" value="Juan Manuel Pérez Rendón">
+            
+            <label for="fecha">Fecha de Nacimiento:</label>
+            <input type="date" id="fecha" name="fecha" value="1986-06-04">
+            
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" value="62">
+            
+            <label for="genero">Género:</label>
+            <select id="genero" name="genero">
+                <option value="Masculino" selected>Masculino</option>
+                <option value="Femenino">Femenino</option>
+                <option value="Otro">Otro</option>
+            </select>
+
+            <label for="estatura">Estatura (cm):</label>
+            <input type="number" id="estatura" name="estatura" value="173">
+            
+            <label for="peso">Peso (kg):</label>
+            <input type="number" id="peso" name="peso" value="82">
+            
+            <label for="diagnostico">Diagnóstico:</label>
+            <textarea id="diagnostico" name="diagnostico">El Sr. Juan Pérez tiene cáncer</textarea>
+            
+            <label for="tipoSangre">Tipo de Sangre:</label>
+            <input type="text" id="tipoSangre" name="tipoSangre" value="O+">
+            
+            <button type="submit">Guardar Cambios</button>
+            <button type="button" onclick="cancelarEdicion()">Cancelar</button>
+        </form>
+    </div>
+
+    <script>
+        function cancelarEdicion() {
+            window.location.href = "4-PerfilPaciente.html";
+        }
+    </script>
+</body>
+</html>
+

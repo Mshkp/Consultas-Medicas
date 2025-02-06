@@ -41,7 +41,7 @@ function saveSettings() {
   
   // Función para regresar al Lobby
   function goBackToLobby() {
-    window.location.href = "Lobby-Paciente.html";  // Cambia la URL según tu necesidad
+    window.location.href = "dashboard_medico.html";  // Cambia la URL según tu necesidad
   }
   
   // Cargar la configuración si está guardada en localStorage

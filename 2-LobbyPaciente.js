@@ -51,3 +51,26 @@ const onClick = (item) => {
     item.classList.remove("active");
   }
 };
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    actualizarDiagnostico();
+
+    function actualizarDiagnostico() {
+        fetch("obtener_diagnostico.php?paciente_id=1") // Reemplazar con el ID real del paciente
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    document.getElementById("diagnostico-texto").innerText = data.error;
+                } else {
+                    document.getElementById("diagnostico-texto").innerText = data.descripcion;
+                    document.getElementById("progreso-texto").innerText = data.progreso + "%";
+                    document.getElementById("barra-progreso").style.width = data.progreso + "%";
+                }
+            })
+            .catch(error => console.error("Error al obtener diagnóstico:", error));
+    }
+
+    setInterval(actualizarDiagnostico, 60000); // Actualizar cada minuto
+});

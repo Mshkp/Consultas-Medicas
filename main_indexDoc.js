@@ -34,25 +34,30 @@ $('.tab a').on('click', function (e) {
 });
 
 
-// Registro de médico
-document.getElementById('signupForm').addEventListener('submit', async function (e) {
-    e.preventDefault();
+// Registro del médico (registro.js)
 
-    const formData = new FormData(this);
+$(document).ready(function() {
+    $("#signupForm").submit(function(event) {
+        event.preventDefault();
 
-    const response = await fetch("registro_medico.php", {
-        method: "POST",
-        body: formData
+        // Obtener los datos del formulario
+        const nombre = $("input[name='nombre']").val();
+        const apellidos = $("input[name='apellidos']").val();
+        const cedula = $("input[name='cedula']").val();
+
+        // Crear un objeto con los datos esenciales del médico
+        const doctorData = {
+            nombre: nombre,
+            apellidos: apellidos,
+            cedula: cedula
+        };
+
+        // Guardar los datos en localStorage
+        localStorage.setItem("medico", JSON.stringify(doctorData));
+
+        // Redirigir al lobby del médico
+        window.location.href = "login-register_Doc.html";
     });
-
-    const data = await response.json();
-
-    if (data.success) {
-        alert(data.success);
-        this.reset(); // Limpiar formulario después del registro
-    } else {
-        alert(data.error);
-    }
 });
 
 // Inicio de sesión de médico
@@ -74,3 +79,5 @@ document.getElementById('loginForm').addEventListener('submit', async function (
         alert(data.error);
     }
 });
+
+

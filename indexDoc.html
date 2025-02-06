@@ -2,70 +2,105 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Médicos</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style_indexDoc.css">
+    <title>Clínica Virtual - Médicos</title>
+    <link rel="stylesheet" href="indexDoc_style.css">
 </head>
 <body>
-    <div class="form">
-        <ul class="tab-group">
-            <li class="tab active">
-                <a href="#signup" style="border-radius: 15px!important;margin-right:8px;">Registrarse</a>
-            </li>
-            <li class="tab">
-                <a href="#login" style="border-radius: 15px!important;margin-left:8px;">Iniciar Sesión</a>
-            </li>
-        </ul>
-        <div class="tab-content">
-            <!-- Registro -->
-            <div id="signup">
-                <h1>¡Bienvenido!</h1>
-                <form id="signupForm">
-                    <div class="top-row">
-                        <div class="field-wrap">
-                            <input type="text" name="nombre" placeholder="Nombre/s" required />
-                        </div>
-                        <div class="field-wrap">
-                            <input type="text" name="apellidos" placeholder="Apellidos" required />
-                        </div>
-                    </div>
-                    <div class="field-wrap">
-                        <input type="email" name="email" placeholder="Correo Electrónico" required />
-                    </div>
-                    <div class="field-wrap">
-                        <input type="text" name="cedula" placeholder="Cédula Profesional" required />
-                    </div>
-                    <div class="field-wrap">
-                        <input type="password" name="password" placeholder="Contraseña" required />
-                    </div>
-                    <button type="submit" class="button button-block">Crear Cuenta Nueva</button>
-                </form>
-            </div>
 
-            <!-- Login -->
-            <div id="login">
-                <h1>¡Qué bueno que regresaste!</h1>
-                <form id="loginForm">
-                    <div class="field-wrap">
-                        <input type="text" name="cedula" placeholder="Cédula Profesional" required />
-                    </div>
-                    <div class="field-wrap">
-                        <input type="password" name="password" placeholder="Contraseña" required />
-                    </div>
-                    <p class="forgot">
-                        <a href="">¿Olvidaste tu Contraseña?</a>
-                    </p>
-                    <button class="button button-block">Iniciar Sesión</button>
-                </form>
+    <nav class="navbar">
+        <div class="logo">Clínica <span>Virtual</span></div>
+        <ul class="nav-links">
+            <li><a href="#">¿Quiénes Somos?</a></li>
+            <li><a href="#">Pacientes</a></li>
+            <li><a href="#">Recursos</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+        <button id="btn-login" class="btn btn-login">Iniciar Sesión</button>
+    </nav>
+
+    <header class="hero">
+        <h1>Atención médica eficiente y segura</h1>
+        <p>Optimiza tu tiempo y brinda una mejor atención a tus pacientes con nuestra plataforma.</p>
+        <br>
+        <button id="btn-start" class="btn btn-start">Comenzar Ahora</button>
+    </header>
+
+    <section class="benefits">
+        <h2>Beneficios para Médicos</h2>
+        <div class="benefits-container">
+            <div class="benefit-card">
+                <h3>📂 Historial Clínico Digital</h3>
+                <p>Accede al historial de tus pacientes de manera rápida y segura.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>📅 Gestión de Consultas</h3>
+                <p>Programa y administra tus consultas fácilmente.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>📊 Diagnósticos en Tiempo Real</h3>
+                <p>Actualiza y visualiza diagnósticos en cualquier momento.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>🔒 Comunicación Segura</h3>
+                <p>Mantén contacto directo con tus pacientes con total privacidad.</p>
             </div>
         </div>
-    </div>
+    </section>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="main_indexDoc.js"></script>
+    <section class="plans">
+      <h2>Planes de Suscripción</h2>
+      <div class="plans-container">
+          <div class="plan-card">
+              <h3>🥉 Básico</h3>
+              <p>Acceso limitado a funcionalidades esenciales.</p>
+              <ul>
+                  <li>✔ Gestión de citas</li>
+                  <li>✔ Historial médico básico</li>
+                  <li>✖ Soporte prioritario</li>
+              </ul>
+              <p class="price">$9.99/mes</p>
+              <button class="btn btn-plan">Suscribirse</button>
+          </div>
+  
+          <div class="plan-card popular">
+              <h3>🥈 Profesional</h3>
+              <p>Funciones avanzadas para mejorar tu consulta.</p>
+              <ul>
+                  <li>✔ Todo en el plan Básico</li>
+                  <li>✔ Diagnósticos en tiempo real</li>
+                  <li>✔ Comunicación segura</li>
+              </ul>
+              <p class="price">$19.99/mes</p>
+              <button class="btn btn-plan">Suscribirse</button>
+          </div>
+  
+          <div class="plan-card">
+              <h3>🥇 Premium</h3>
+              <p>La mejor experiencia para tu consultorio.</p>
+              <ul>
+                  <li>✔ Todo en el plan Profesional</li>
+                  <li>✔ Integración con software externo</li>
+                  <li>✔ Soporte prioritario 24/7</li>
+              </ul>
+              <p class="price">$29.99/mes</p>
+              <button class="btn btn-plan">Suscribirse</button>
+          </div>
+      </div>
+  </section>
+
+    <section class="cta">
+        <h2>Únete a nuestra plataforma</h2>
+        <p>Optimiza tu trabajo y brinda una mejor atención a tus pacientes.</p>
+        <br>
+        <button id="btn-register" class="btn btn-register">Registrarse</button>
+    </section>
+
+    <footer>
+        <p>© 2025 Clínica Virtual - Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script_indexDoc.js"></script>
+
 </body>
 </html>

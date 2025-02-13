@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de Pacientes</title>
+    <link rel="stylesheet" href="style_pacientes.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Clínica <span>Virtual</span></div>
+        <ul class="nav-links">
+            <li><a href="dashboard_medico.html">Inicio</a></li>
+            <li><a href="#">Mis Consultas</a></li>
+            <li><a href="#">Mis Pacientes</a></li>
+            <li><a href="#">Perfil</a></li>
+            <li><a href="#" onclick="cerrarSesion()">Cerrar Sesión</a></li>
+        </ul>
+    </nav>
+    
+    <section class="historial-pacientes">
+        <h1>Historial de Pacientes</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Última consulta</th>
+                    <th>Diagnóstico</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-pacientes">
+                <!-- Los datos de los pacientes se llenarán dinámicamente aquí -->
+            </tbody>
+        </table>
+    </section>
+
+    <script src="script_pacientes.js"></script>
+</body>
+</html>

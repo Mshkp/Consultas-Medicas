@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lobby Médico</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="style_lobbyMedico.css">
 </head>
 <body>
@@ -15,12 +15,12 @@
             <li><a href="#">Mis Consultas</a></li>
             <li><a href="#">Mis Pacientes</a></li>
             <li><a href="#">Perfil</a></li>
-            <li><a href="#">Cerrar Sesión</a></li>
+            <li><a href="#" onclick="cerrarSesion()">Cerrar Sesión</a></li>
         </ul>
     </nav>
 
     <section class="welcome-section">
-        <h1>¡Bienvenido Doctor. <span id="doctor-name"></span>!</h1>
+        <h1>¡Bienvenido Doctor!</h1>
     </section>
 
     <section class="options-panel">
@@ -28,22 +28,22 @@
             <div class="option-card">
                 <h3>👨‍⚕️ Gestionar Pacientes</h3>
                 <p>Accede al historial y los datos de tus pacientes.</p>
-                <button onclick="window.location.href='pacientes.html'">Ver Pacientes</button>
+                <button onclick="verPacientes()">Ver Pacientes</button>
             </div>
             <div class="option-card">
                 <h3>📅 Consultas Programadas</h3>
                 <p>Consulta, modifica y confirma tus citas.</p>
-                <button onclick="window.location.href='consultas.html'">Ver Consultas</button>
+                <button onclick="verConsultas()">Ver Consultas</button>
             </div>
             <div class="option-card">
                 <h3>📊 Diagnósticos</h3>
                 <p>Visualiza y actualiza los diagnósticos de los pacientes.</p>
-                <button onclick="window.location.href='diagnosticos.html'">Ver Diagnósticos</button>
+                <button onclick="verDiagnosticos()">Ver Diagnósticos</button>
             </div>
             <div class="option-card">
                 <h3>⚙️ Configuración</h3>
                 <p>Gestiona tu perfil y preferencias.</p>
-                <button onclick="window.location.href='configuracion.html'">Configurar</button>
+                <button onclick="configurar()">Configurar</button>
             </div>
         </div>
     </section>
@@ -52,7 +52,6 @@
         <p>© 2025 Clínica Virtual - Todos los derechos reservados.</p>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+    <script src="script_dash_med.js"></script>
 </body>
 </html>

@@ -67,7 +67,7 @@ footer {
     border-radius: 10px;
 }
 
-.diagnosticos-section {
+.options-panel {
     text-align: center;
     padding: 20px;
     background-color: #fff;
@@ -75,22 +75,65 @@ footer {
     border-radius: 10px;
 }
 
-.diagnosticos-container {
-    margin-top: 20px;
+.options-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
-.diagnostico-card {
+.option-card {
     background-color: #f4f4f4;
     padding: 20px;
-    margin: 10px 0;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.diagnostico-card h3 {
-    color: #4CAF50;
+.option-card button {
+    margin-top: 10px;
 }
 
-.diagnostico-card p {
-    margin: 5px 0;
+/* Estilo para el formulario de diagnóstico */
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="date"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form input[type="submit"]:hover {
+    background-color: #45a049;
 }

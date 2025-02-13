@@ -1,10 +1,10 @@
 <?php
-$servername = "localhost"; // Cambia si tu servidor de base de datos es diferente
-$username = "root";        // Cambia el nombre de usuario si es necesario
-$password = "";            // Cambia la contraseña si es necesario
-$dbname = "consultas";     // Nombre de la base de datos
+$servername = "localhost"; // Cambia esto si tu base de datos está en otro servidor
+$username = "root";        // Tu nombre de usuario de la base de datos
+$password = "";            // Tu contraseña de la base de datos
+$dbname = "consultas";       // Nombre de la base de datos
 
-// Crear conexión
+// Crear la conexión
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Verificar la conexión

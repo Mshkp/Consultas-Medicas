@@ -8,10 +8,19 @@ body {
     height: 100vh;
     background: #910f0f;
     overflow-y: hidden!important;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
+}
+
+.doctor-card {
+    font-family: 'Poppins';
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
 }
 
 a {
+    font-family: 'Poppins';
     text-decoration: none;
     color: #910f0f;
     transition: 0.5s ease;

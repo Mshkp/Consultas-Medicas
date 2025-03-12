@@ -1,4 +1,12 @@
 // Cambiar entre las pestañas de "Registrarse" y "Iniciar Sesión"
+document.addEventListener("DOMContentLoaded", function () {
+    const cedulaInput = document.getElementById("cedula");
+
+    cedulaInput.addEventListener("input", function () {
+        this.value = this.value.replace(/\D/g, ""); // Solo permite números
+    });
+});
+
 document.querySelectorAll('.tab a').forEach(tab => {
     tab.addEventListener('click', function (e) {
         e.preventDefault();

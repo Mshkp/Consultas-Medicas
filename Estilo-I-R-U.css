@@ -1,9 +1,11 @@
-/* Estilo general */
+/* Estilos generales */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: #000000;
 }
 
@@ -197,5 +199,41 @@ body {
     margin-top: 10px;
 }
 
+/* Estilos específicos para los enlaces */
+.registro-link {
+    display: block;
+    margin-top: 15px;
+    color: #ff0000;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
 
+.registro-link2 {
+    display: block;
+    margin-top: 15px;
+    color: #000000;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
 
+.registro-link:hover {
+    color: #205086;
+}
+
+.registro-link2:hover {
+    color: #205086;
+}
+
+.forgot {
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #007bff;
+}
+
+.forgot:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}

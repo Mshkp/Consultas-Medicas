@@ -2,61 +2,34 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diagnósticos</title>
     <link rel="stylesheet" href="style_diagnosticos.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">Clínica <span>Virtual</span></div>
-        <ul class="nav-links">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Mis Consultas</a></li>
-            <li><a href="#">Mis Pacientes</a></li>
-            <li><a href="#">Perfil</a></li>
-            <li><a href="#" onclick="cerrarSesion()">Cerrar Sesión</a></li>
-        </ul>
-    </nav>
 
-    <section class="welcome-section">
-        <h1>¡Bienvenido Doctor!</h1>
-    </section>
+    <h2>Ver Diagnósticos de Pacientes</h2>
+    <button onclick="cargarDiagnosticos()">Cargar Diagnósticos</button>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Paciente</th>
+                <th>Descripción</th>
+                <th>Progreso</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="tablaDiagnosticos"></tbody>
+    </table>
 
-    <section class="diagnosticos-section">
-        <h2>Ver Diagnósticos de Pacientes</h2>
-        <button onclick="cargarDiagnosticos()">Cargar Diagnósticos</button>
-
-        <table id="diagnosticos-table">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Paciente</th>
-                    <th>Descripción</th>
-                    <th>Progreso</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Los diagnósticos se cargarán aquí mediante JavaScript -->
-            </tbody>
-        </table>
-
-        <div id="formulario">
-            <h3>Agregar/Actualizar Diagnóstico</h3>
-            <form id="formDiagnostico">
-                <input type="hidden" id="diagnostico_id">
-                <input type="text" id="paciente" placeholder="Paciente" required>
-                <textarea id="descripcion" placeholder="Descripción del diagnóstico" required></textarea>
-                <input type="number" id="progreso" placeholder="Progreso (0-100)" required>
-                <button type="submit">Guardar Diagnóstico</button>
-            </form>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2025 Clínica Virtual - Todos los derechos reservados.</p>
-    </footer>
+    <h2>Agregar/Actualizar Diagnóstico</h2>
+    <form id="formDiagnostico">
+        <input type="text" id="paciente" placeholder="Nombre del paciente" required>
+        <textarea id="descripcion" placeholder="Descripción del diagnóstico" required></textarea>
+        <input type="number" id="progreso" placeholder="Progreso (%)" required>
+        <button type="submit">Guardar Diagnóstico</button>
+    </form>
 
     <script src="script_diagnosticos.js"></script>
 </body>

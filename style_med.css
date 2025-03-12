@@ -1,24 +1,132 @@
+/* Estilos generales */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #20df07, #20df07);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: fadeIn 1s ease-in;
 }
 
-.paciente-card {
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin: 10px 0;
-    background: #f9f9f9;
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-.progreso-bar {
-    height: 10px;
-    background: lightgray;
-    margin-top: 5px;
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+    animation: slideUp 0.8s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.progreso {
-    height: 10px;
-    background: green;
-    width: 0%;
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+header h1 {
+    color: #4a4a4a;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Estilos del formulario */
+.form {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tab-group {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab a {
+    text-decoration: none;
+    padding: 12px 25px;
+    background: #218838;
+    color: white;
+    border-radius: 25px;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.tab a:hover {
+    background: #0056b3;
+}
+
+.field-wrap {
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input, select {
+    width: 90%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #6e8efb;
+    box-shadow: 0px 0px 5px rgba(110, 142, 251, 0.5);
+}
+
+button.button-block {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 90%;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+button.button-block:hover {
+    background: #218838;
+}
+
+.forgot a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #666;
+    text-align: center;
 }

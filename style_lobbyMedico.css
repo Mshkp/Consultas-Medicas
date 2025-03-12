@@ -1,6 +1,6 @@
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif; /* Tipografía más moderna */
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
@@ -13,14 +13,17 @@ h1, h2, h3 {
 button {
     background-color: #4CAF50;
     color: white;
-    border: none;
+    border: #000000;
     padding: 10px 20px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 25px; /* Botón más estilizado */
+    font-size: 16px;
+    transition: 0.5s ease-in-out;
 }
 
 button:hover {
     background-color: #45a049;
+    transform: scale(1.05);
 }
 
 footer {
@@ -30,9 +33,10 @@ footer {
     color: white;
 }
 
+/* Estilos de la barra de navegación */
 .navbar {
     background-color: #4CAF50;
-    padding: 10px;
+    padding: 15px;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -40,57 +44,89 @@ footer {
 }
 
 .navbar .logo {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
+    color: #dfffd6;
     text-decoration: underline;
 }
 
+/* Sección de bienvenida */
 .welcome-section {
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px;
     background-color: #fff;
-    margin: 20px 0;
-    border-radius: 10px;
+    margin: 20px auto;
+    width: 90%;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.diagnosticos-section {
+/* Panel de opciones */
+.options-panel {
     text-align: center;
     padding: 20px;
     background-color: #fff;
-    margin: 20px 0;
-    border-radius: 10px;
+    margin: 20px auto;
+    width: 90%;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.diagnosticos-container {
-    margin-top: 20px;
-}
-
-.diagnostico-card {
-    background-color: #f4f4f4;
+/* Contenedor de opciones en cuadrícula */
+.options-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Se adapta a la pantalla */
+    gap: 20px;
     padding: 20px;
-    margin: 10px 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: center;
 }
 
-.diagnostico-card h3 {
-    color: #4CAF50;
+/* Tarjetas de opciones */
+.option-card {
+    
+    background-color: #f4f4f4;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.diagnostico-card p {
-    margin: 5px 0;
+.option-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
+
+.option-card h3 {
+    font-size: 20px;
+    color: #006400;
+    margin-bottom: 10px;
+}
+
+.option-card p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.option-card button {
+    width: 100%;
+}
+

@@ -52,25 +52,40 @@ const onClick = (item) => {
   }
 };
 
+document.addEventListener('DOMContentLoaded', function () {
+  fetch('obtener_doctores.php')
+      .then(response => response.json())
+      .then(data => {
+          const doctoresList = document.getElementById('doctores-list');
+          data.forEach(doctor => {
+              const doctorDiv = document.createElement('div');
+              doctorDiv.className = 'doctor-card';
+              doctorDiv.innerHTML = `
+                  <img src="${doctor.foto || 'default.jpg'}" alt="${doctor.nombre}">
+                  <h3>${doctor.nombre} ${doctor.apellidos}</h3>
+                  <p>Especialidad: ${doctor.especialidad}</p>
+                  <button onclick="enviarSolicitud(${doctor.id})">Consultar Doctor</button>
+              `;
+              doctoresList.appendChild(doctorDiv);
+          });
+      });
+});
 
-
-document.addEventListener("DOMContentLoaded", function () {
-    actualizarDiagnostico();
-
-    function actualizarDiagnostico() {
-        fetch("obtener_diagnostico.php?paciente_id=1") // Reemplazar con el ID real del paciente
-            .then(response => response.json())
-            .then(data => {
-                if (data.error) {
-                    document.getElementById("diagnostico-texto").innerText = data.error;
-                } else {
-                    document.getElementById("diagnostico-texto").innerText = data.descripcion;
-                    document.getElementById("progreso-texto").innerText = data.progreso + "%";
-                    document.getElementById("barra-progreso").style.width = data.progreso + "%";
-                }
-            })
-            .catch(error => console.error("Error al obtener diagnóstico:", error));
-    }
-
-    setInterval(actualizarDiagnostico, 60000); // Actualizar cada minuto
+ // Cargar la lista de doctores al abrir la página
+document.addEventListener('DOMContentLoaded', function () {
+  fetch('obtener_doctores.php')
+      .then(response => response.json())
+      .then(data => {
+          const doctoresList = document.getElementById('doctores-list');
+          data.forEach(doctor => {
+              const doctorDiv = document.createElement('div');
+              doctorDiv.className = 'doctor-card';
+              doctorDiv.innerHTML = `
+                  <h3>${doctor.nombre} ${doctor.apellidos}</h3>
+                  <p>Especialidad: ${doctor.especialidad}</p>
+                  <p>Miembro desde: ${doctor.fecha_registro}</p>
+              `;
+              doctoresList.appendChild(doctorDiv);
+          });
+      });
 });

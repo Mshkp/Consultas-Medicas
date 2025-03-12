@@ -1,27 +1,27 @@
 <?php
-require 'conexion.php'; // Incluye la conexión a la base de datos
-
-session_start(); // Inicia la sesión
+session_start();
+include("conexion.php"); // Asegúrate de que este archivo conecta a la base de datos correctamente
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $cedula = $_POST['cedula'];
-    $password = $_POST['password'];
+    if (!isset($_POST["cedula"]) || !preg_match("/^[0-9]+$/", $_POST["cedula"])) {
+        die("Error: La cédula solo debe contener números.");
+    }
 
-    // Consultar al médico con la cédula proporcionada
-    $sql = "SELECT id, password FROM medicos WHERE cedula = ?";
-    $stmt = $conn->prepare($sql);
+    $cedula = $_POST["cedula"];
+
+    // Preparar la consulta a la base de datos
+    $query = "SELECT * FROM medicos WHERE cedula = ?";
+    $stmt = $conn->prepare($query);
     $stmt->bind_param("s", $cedula);
     $stmt->execute();
-    $stmt->store_result();
-    $stmt->bind_result($id, $hashed_password);
-    $stmt->fetch();
+    $result = $stmt->get_result();
 
-    if ($stmt->num_rows > 0 && password_verify($password, $hashed_password)) {
-        // Credenciales correctas, iniciar sesión
-        $_SESSION['medico_id'] = $id;
-        echo json_encode(["success" => "Inicio de sesión exitoso"]);
+    if ($result->num_rows > 0) {
+        $_SESSION["medico"] = $cedula;
+        header("Location: lobby_medico.php"); // Redirige al lobby si la cédula existe
+        exit();
     } else {
-        echo json_encode(["error" => "Cédula o contraseña incorrectos"]);
+        echo "Cédula no registrada.";
     }
 
     $stmt->close();

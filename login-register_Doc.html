@@ -2,70 +2,76 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Médicos</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style_indexDoc.css">
+    <title>Registro e Inicio de Sesión - Doctor</title>
+    <link rel="stylesheet" href="style_med.css">
 </head>
 <body>
-    <div class="form">
-        <ul class="tab-group">
-            <li class="tab active">
-                <a href="#signup" style="border-radius: 15px!important;margin-right:8px;">Registrarse</a>
-            </li>
-            <li class="tab">
-                <a href="#login" style="border-radius: 15px!important;margin-left:8px;">Iniciar Sesión</a>
-            </li>
-        </ul>
-        <div class="tab-content">
-            <!-- Registro -->
-            <div id="signup">
-                <h1>¡Bienvenido!</h1>
-                <form id="signupForm">
-                    <div class="top-row">
-                        <div class="field-wrap">
-                            <input type="text" name="nombre" placeholder="Nombre/s" required />
-                        </div>
-                        <div class="field-wrap">
-                            <input type="text" name="apellidos" placeholder="Apellidos" required />
-                        </div>
+    <div class="container">
+        <main>
+            <div class="form">
+                <ul class="tab-group">
+                    <li class="tab active">
+                        <a href="#signup">Registrarse</a>
+                    </li>
+                    <li class="tab">
+                        <a href="#login">Iniciar Sesión</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <!-- Registro -->
+                    <div id="signup">
+                        <h2>¡Bienvenido!</h2>
+                        <form action="registro_medico.php" method="POST">
+                            <div class="field-wrap">
+                                <input type="text" name="nombre" placeholder="Nombre/s" required />
+                            </div>
+                            <div class="field-wrap">
+                                <input type="text" name="apellidos" placeholder="Apellidos" required />
+                            </div>
+                            <div class="field-wrap">
+                                <input type="email" name="email" placeholder="Correo Electrónico" required />
+                            </div>
+                            <div class="field-wrap">
+                                <input type="text" name="cedula" placeholder="Cédula Profesional" required />
+                            </div>
+                            <div class="field-wrap">
+                                <select name="especialidad" required>
+                                    <option value="">Selecciona una especialidad</option>
+                                    <option value="Traumatología">Traumatología</option>
+                                    <option value="Pediatría">Pediatría</option>
+                                    <option value="Cardiología">Cardiología</option>
+                                </select>
+                            </div>
+                            <div class="field-wrap">
+                                <input type="password" name="password" placeholder="Contraseña" required />
+                            </div>
+                            <button type="submit" class="button button-block">Crear Cuenta Nueva</button>
+                        </form>
                     </div>
-                    <div class="field-wrap">
-                        <input type="email" name="email" placeholder="Correo Electrónico" required />
+                    <!-- Login -->
+                    <div id="login">
+                        <h2>¡Qué bueno que regresaste!</h2>
+                        <form action="dashboard_medico.html" method="POST">
+                            <div class="field-wrap">
+                                <input type="text" name="cedula" id="cedula" placeholder="Ingrese su cédula" required pattern="[0-9]+" title="Ingrese solo números" />
+                            </div>
+                            <div class="field-wrap">
+                                <input type="password" name="password" placeholder="Contraseña" required />
+                            </div>
+                            <p class="forgot">
+                                <a href="">¿Olvidaste tu Contraseña?</a>
+                            </p>
+                            <button type="submit" class="button button-block">Iniciar Sesión</button>
+                        </form>
                     </div>
-                    <div class="field-wrap">
-                        <input type="text" name="cedula" placeholder="Cédula Profesional" required />
-                    </div>
-                    <div class="field-wrap">
-                        <input type="password" name="password" placeholder="Contraseña" required />
-                    </div>
-                    <button type="submit" class="button button-block">Crear Cuenta Nueva</button>
-                </form>
+                </div>
             </div>
-
-            <!-- Login -->
-            <div id="login">
-                <h1>¡Qué bueno que regresaste!</h1>
-                <form id="loginForm">
-                    <div class="field-wrap">
-                        <input type="text" name="cedula" placeholder="Cédula Profesional" required />
-                    </div>
-                    <div class="field-wrap">
-                        <input type="password" name="password" placeholder="Contraseña" required />
-                    </div>
-                    <p class="forgot">
-                        <a href="">¿Olvidaste tu Contraseña?</a>
-                    </p>
-                    <button class="button button-block">Iniciar Sesión</button>
-                </form>
-            </div>
-        </div>
+        </main>
+        <footer>
+            <p>© 2025 Consultas Médicas</p>
+        </footer>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="main_indexDoc.js"></script>
 </body>
 </html>

@@ -1,0 +1,189 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #97f88e; /* Azul cielo claro */
+    color: #549462;
+    margin: 0;
+    padding: 0;
+}
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #28a745; /* Verde del indexDoc */
+    color: white;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar .logo span {
+    color: #fff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login {
+    background-color: #28a745; /* Verde del indexDoc */
+    color: white;
+}
+
+.btn-login:hover {
+    background-color: #218838;
+}
+
+.btn-start, .btn-register {
+    background-color: #388e3c; /* Verde más oscuro */
+    color: white;
+}
+
+.btn-start:hover, .btn-register:hover {
+    background-color: #2e7d32;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 35.5px 20px; /* Reducido el padding superior e inferior */
+    background-color: #ffffff; /* Azul cielo suave */
+}
+
+.hero h1 {
+    font-size: 34px; /* Reducido el tamaño de la fuente */
+    color: #388e3c; /* Verde más oscuro */
+    margin: 0;
+}
+
+.hero p {
+    font-size: 16px; /* Reducido el tamaño del párrafo */
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Beneficios */
+.benefits {
+    text-align: center;
+    padding: 20px 20px;
+    background-color: #97f88e; /* Verde suave */
+}
+
+.benefits h2 {
+    font-size: 24px;
+    color: #252525; /* Verde más oscuro */
+    margin-bottom: 15px;
+}
+
+.benefits-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.benefit-card {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card h3 {
+    font-size: 20px;
+    color: #388e3c; /* Verde más oscuro */
+}
+
+.benefit-card p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Sección de llamada a la acción */
+.cta {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #28a745; /* Verde del indexDoc */
+    color: white;
+}
+
+.cta h2 {
+    font-size: 28px;
+    margin: 0;
+}
+
+.cta p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #28a745; /* Verde del indexDoc */
+    color: white;
+    margin-top: 20px;
+}
+
+/* Media queries para adaptar la vista */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .benefits-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .benefit-card {
+        width: 100%;
+    }
+
+    .cta h2 {
+        font-size: 24px;
+    }
+}

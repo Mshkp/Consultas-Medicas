@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="Estilo-I-R-U.css">
+    <title>Consultas Médicas</title>
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <!-- Formulario de Registro -->
+        <div class="form-container sign-up">
+            <form id="registerForm" method="post">
+                <h1>Crear Cuenta</h1>
+                <input type="text" id="name" placeholder="Nombre" required>
+                <input type="email" id="email" placeholder="Correo Electrónico" required>
+                <input type="password" id="password" placeholder="Contraseña" required>
+                <button type="submit" id="registerButton">Registrar Cuenta Nueva</button>
+                <p id="successMessage" class="hidden">¡Cuenta registrada exitosamente!</p>
+                <p id="errorMessage" class="hidden"> *Todos los campos son obligatorios* </p>
+            </form>
+        </div>
+
+        <!-- Formulario de Inicio de Sesión -->
+        <div class="form-container sign-in">
+            <form id="loginForm">
+                <h1>Iniciar Sesión</h1>
+                
+                <input type="email" id="loginEmail" placeholder="Correo" required>
+                <input type="password" id="loginPassword" placeholder="Contraseña" required>
+                <a href="3-OlvidasteContrasena.html" class="registro-link">¿Olvidaste tu Contraseña?</a>
+                <button type="submit" id="loginButton">Iniciar</button>
+                <br>
+            </form>
+        </div>
+
+        <!-- Panel de cambio entre formularios -->
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>¡Bienvenido!</h1>
+                    <p>Registre sus datos.</p>
+                    <button id="login">Iniciar Sesión</button>
+                </div>
+
+                <div class="toggle-panel toggle-right">
+                    <h1>¿Nuevo Usuario?</h1>
+                    <br>
+                    <button id="register">Crear Cuenta</button>
+                    <a href="indexDoc.html" class="registro-link2">¿Eres doctor? Da click Aquí para Registrarte</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="I-R-U.js"></script>
+</body>
+
+</html>

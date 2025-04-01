@@ -1,62 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="Estilo-I-R-U.css">
-    <title>Consultas Médicas</title>
-</head>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clínica Virtual - Pacientes</title>
+        <link rel="stylesheet" href="index_style.css">
+    </head>
+        <body>
+            <nav class="navbar">
+                <div class="logo">Clínica <span>Virtual</span></div>
+                <ul class="nav-links">
+                    <li><a href="#">¿Quiénes Somos?</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+                <button id="btn-login" class="btn btn-login">Iniciar Sesión</button>
+            </nav>
 
-<body>
-
-    <div class="container" id="container">
-        <!-- Formulario de Registro -->
-        <div class="form-container sign-up">
-            <form id="registerForm" method="post">
-                <h1>Crear Cuenta</h1>
-                <input type="text" id="name" placeholder="Nombre" required>
-                <input type="email" id="email" placeholder="Correo Electrónico" required>
-                <input type="password" id="password" placeholder="Contraseña" required>
-                <button type="submit" id="registerButton">Registrar Cuenta Nueva</button>
-                <p id="successMessage" class="hidden">¡Cuenta registrada exitosamente!</p>
-                <p id="errorMessage" class="hidden"> *Todos los campos son obligatorios* </p>
-            </form>
-        </div>
-
-        <!-- Formulario de Inicio de Sesión -->
-        <div class="form-container sign-in">
-            <form id="loginForm">
-                <h1>Iniciar Sesión</h1>
+            <header class="hero">
+                <h1>Tu salud en buenas manos</h1>
+                <p>Gestiona tus consultas médicas de manera rápida y segura.</p>
                 
-                <input type="email" id="loginEmail" placeholder="Correo" required>
-                <input type="password" id="loginPassword" placeholder="Contraseña" required>
-                <a href="3-OlvidasteContrasena.html" class="registro-link">¿Olvidaste tu Contraseña?</a>
-                <button type="submit" id="loginButton">Iniciar</button>
-                <br>
-            </form>
-        </div>
+                <button id="btn-start" class="btn btn-start">Comenzar Ahora</button>
+            </header>
 
-        <!-- Panel de cambio entre formularios -->
-        <div class="toggle-container">
-            <div class="toggle">
-                <div class="toggle-panel toggle-left">
-                    <h1>¡Bienvenido!</h1>
-                    <p>Registre sus datos.</p>
-                    <button id="login">Iniciar Sesión</button>
+            <section class="benefits">
+                <h2>Beneficios para Pacientes</h2>
+                <div class="benefits-container">
+                    <div class="benefit-card">
+                        <h3>📅 Agendamiento de Citas</h3>
+                        <p>Programa tus consultas con facilidad.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>📂 Historial Médico</h3>
+                        <p>Accede a tu información de salud en cualquier momento.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>💬 Comunicación Directa</h3>
+                        <p>Consulta con tu médico de manera segura.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>🔔 Recordatorios de Citas</h3>
+                        <p>Recibe alertas para no olvidar tus consultas.</p>
+                    </div>
                 </div>
+            </section>
 
-                <div class="toggle-panel toggle-right">
-                    <h1>¿Nuevo Usuario?</h1>
-                    <br>
-                    <button id="register">Crear Cuenta</button>
-                    <a href="indexDoc.html" class="registro-link2">¿Eres doctor? Da click Aquí para Registrarte</a>
-                </div>
-            </div>
-        </div>
-    </div>
+            <footer>
+                <p>© 2025 Clínica Virtual - Todos los derechos reservados.</p>
+            </footer>
 
-    <script src="I-R-U.js"></script>
-</body>
-
+            <script src="script_index.js"></script>
+            
+        </body>
 </html>

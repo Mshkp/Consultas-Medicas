@@ -1,76 +1,117 @@
+/* Fuente desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
 }
 
 .navbar {
     background-color: #4CAF50;
-    padding: 15px;
-    color: white;
+    padding: 15px 30px;
+    color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .navbar .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 24px;
+    font-weight: 600;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 15px;
+.nav-links li {
+    display: inline-block;
+    margin-left: 20px;
 }
 
 .nav-links a {
-    color: white;
+    color: #fff;
     text-decoration: none;
-    font-size: 1rem;
+    font-weight: 500;
 }
 
-.historial-pacientes {
-    max-width: 900px;
-    margin: 30px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+section.historial-pacientes {
+    padding: 40px;
 }
 
-h1 {
-    color: #333;
+section h1 {
+    font-size: 32px;
+    color: #4CAF50;
+    margin-bottom: 20px;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-table, th, td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
+th, td {
+    padding: 15px;
+    text-align: left;
 }
 
 th {
     background-color: #4CAF50;
-    color: white;
+    color: #fff;
 }
 
-td button {
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+button {
     background-color: #4CAF50;
     color: white;
+    padding: 10px 15px;
     border: none;
-    padding: 8px 12px;
+    border-radius: 8px;
     cursor: pointer;
-    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s;
 }
 
-td button:hover {
+button:hover {
+    background-color: #45a049;
+}
+
+.diagnostico-form {
+    background-color: #ecf0f1;
+    border-radius: 10px;
+}
+
+.diagnostico-form form {
+    padding: 20px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+input[type="date"], input[type="submit"] {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+
+input[type="submit"]:hover {
     background-color: #45a049;
 }
